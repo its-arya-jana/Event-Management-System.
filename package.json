@@ -1,0 +1,33 @@
+{
+  "name": "event-management-system",
+  "version": "1.0.0",
+  "description": "Event Management System with maintenance, reports, and transactions modules",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-mysql-session": "^2.1.8",
+    "mysql2": "^3.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "event",
+    "management",
+    "system",
+    "membership",
+    "reports",
+    "transactions"
+  ],
+  "author": "",
+  "license": "ISC"
+}
