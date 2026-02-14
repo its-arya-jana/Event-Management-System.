@@ -49,12 +49,75 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login-container" style={{ 
       display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
+      flexDirection: 'column',
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      padding: '1rem'
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
     }}>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        padding: '1rem 2rem',
+        background: 'rgba(255, 255, 255, 0.95)',
+        backdropFilter: 'blur(10px)',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div style={{
+            width: '40px',
+            height: '40px',
+            background: 'linear-gradient(45deg, #4CAF50, #45a049)',
+            borderRadius: '10px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: '1.2rem'
+          }}>
+            🔧
+          </div>
+          <div>
+            <h1 style={{ 
+              margin: 0, 
+              color: '#333',
+              fontSize: '1.8rem'
+            }}>
+              Event Management System
+            </h1>
+            <p style={{ 
+              margin: 0, 
+              color: '#666',
+              fontSize: '0.9rem'
+            }}>
+              Login Portal
+            </p>
+          </div>
+        </div>
+        <a 
+          href="/chart" 
+          className="btn btn-secondary"
+          style={{ 
+            textDecoration: 'none',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '8px',
+            fontWeight: '600',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+            background: 'linear-gradient(45deg, #2196F3, #1976D2)',
+            color: 'white'
+          }}
+        >
+          Flow Chart
+        </a>
+      </div>
+      <div style={{ 
+        flex: 1,
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        padding: '1rem'
+      }}>
       <form onSubmit={handleSubmit} className="card" style={{
         width: '100%',
         maxWidth: '450px',
@@ -176,6 +239,7 @@ const Login = ({ onLogin }) => {
           ) : 'Login to Dashboard'}
         </button>
       </form>
+      </div>
     </div>
   );
 };

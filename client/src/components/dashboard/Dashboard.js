@@ -18,68 +18,24 @@ const Dashboard = ({ user }) => {
 
   return (
     <div className="app-container" style={{ minHeight: '100vh' }}>
-      <header className="header" style={{ 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center',
-        marginBottom: '2rem'
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{
-            width: '40px',
-            height: '40px',
-            background: 'linear-gradient(45deg, #4CAF50, #45a049)',
-            borderRadius: '10px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            fontWeight: 'bold',
-            fontSize: '1.2rem'
-          }}>
-            🔧
-          </div>
-          <div>
-            <h1 style={{ 
-              margin: 0, 
-              color: '#333',
-              fontSize: '1.8rem'
-            }}>
-              Dashboard
-            </h1>
-            <p style={{ 
-              margin: 0, 
-              color: '#666',
-              fontSize: '0.9rem'
-            }}>
-              Event Management System
-            </p>
-          </div>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{
-            background: 'rgba(76, 175, 80, 0.1)',
-            padding: '0.5rem 1rem',
-            borderRadius: '20px',
-            color: '#4CAF50',
-            fontWeight: '600'
-          }}>
-            👤 {user.username} ({user.role})
-          </div>
-          <button 
-            onClick={handleLogout}
-            className="btn btn-danger"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}
-          >
-            <span>🚪</span>
-            Logout
-          </button>
-        </div>
-      </header>
+      <div style={{ padding: '0 2rem', marginBottom: '2rem' }}>
+        <h1 style={{ 
+          margin: 0, 
+          color: '#333',
+          fontSize: '1.8rem',
+          textAlign: 'center'
+        }}>
+          Dashboard
+        </h1>
+        <p style={{ 
+          margin: '0.5rem 0 0', 
+          color: '#666',
+          fontSize: '0.9rem',
+          textAlign: 'center'
+        }}>
+          Event Management System
+        </p>
+      </div>
 
       <div style={{ 
         display: 'grid', 

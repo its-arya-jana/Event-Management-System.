@@ -54,7 +54,34 @@ const MembershipReport = () => {
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h1>Membership Report</h1>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        marginBottom: '2rem',
+        padding: '1rem',
+        background: 'rgba(255, 255, 255, 0.95)',
+        borderRadius: '8px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
+      }}>
+        <h1>Membership Report</h1>
+        <a 
+          href="/chart" 
+          className="btn btn-secondary"
+          style={{ 
+            textDecoration: 'none',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '8px',
+            fontWeight: '600',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+            background: 'linear-gradient(45deg, #2196F3, #1976D2)',
+            color: 'white'
+          }}
+        >
+          Flow Chart
+        </a>
+      </div>
       
       {error && (
         <div style={{

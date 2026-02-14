@@ -8,6 +8,8 @@ import MembershipReport from './components/reports/MembershipReport';
 import TransactionReport from './components/reports/TransactionReport';
 import EventRegistration from './components/transactions/EventRegistration';
 import PaymentProcessing from './components/transactions/PaymentProcessing';
+import Navbar from './components/common/Navbar';
+import ChartPage from './components/common/ChartPage';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -178,9 +180,22 @@ function App() {
     return <div>Loading...</div>;
   }
 
+  const handleLogout = async () => {
+    try {
+      await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include'
+      });
+      setCurrentUser(null);
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
   return (
     <Router>
       <div className="App">
+        <Navbar user={currentUser} onLogout={handleLogout} />
         <Routes>
           <Route 
             path="/login" 
@@ -241,6 +256,16 @@ function App() {
             element={
               currentUser ? 
               <PaymentProcessing /> : 
+              <Navigate to="/login" />
+            } 
+          />
+          
+          {/* Chart route (All users) */}
+          <Route 
+            path="/chart" 
+            element={
+              currentUser ? 
+              <ChartPage /> : 
               <Navigate to="/login" />
             } 
           />
